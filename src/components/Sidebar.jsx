@@ -57,7 +57,7 @@ const Sidebar = ({ closeToggle, user }) => {
           <p>{user.userName}</p>
           <IoIosArrowForward />
         </Link>
-      )}
+      )}  
     </div>
   );
 };
