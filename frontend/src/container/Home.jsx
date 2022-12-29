@@ -5,8 +5,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Sidebar, Login, UserProfile } from "../components/index";
 import logo from "../assets/logo.png";
 // import Pins from "./Pins"
-import client from '../client'
-import { userQuery } from "../utils/data";
+// import client from '../client'
+// import { userQuery } from "../utils/data";
 
 const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
@@ -15,14 +15,14 @@ const Home = () => {
 
   const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
 
-  useEffect(() => {
-    const query = userQuery(userInfo?.googleId)
+  // useEffect(() => {
+  //   const query = userQuery(userInfo?.googleId)
 
-    client.fetch(query)
-    .then((data) => {
-      setUser(data[0])
-    })
-  }, [])
+  //   client.fetch(query)
+  //   .then((data) => {
+  //     setUser(data[0])
+  //   })
+  // }, [])
   
 
   return (
